@@ -2,6 +2,8 @@ import { Roboto } from 'next/font/google'
 import { Header } from 'app/components/shared/Header';
 import { Footer } from 'app/components/shared/Footer';
 import 'app/sass/globals.sass';
+import { Description } from 'app/components/home/Description';
+import { Hero } from 'app/components/home/Hero';
 
 // const inter = Inter({ subsets: ['latin'] })
 const roboto = Roboto({ 
