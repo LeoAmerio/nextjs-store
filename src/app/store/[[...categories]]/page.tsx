@@ -24,6 +24,6 @@ export default async function Category(props: CategoryProp) {
   }
 
   return (
-    <ProductView product={products} />
+    <ProductsWrapper products={products} />
   )
 }
