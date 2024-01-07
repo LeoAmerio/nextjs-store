@@ -28,7 +28,7 @@ export const Header = async () => {
         </ul>
       </nav>
       <div className={styles.Header__user}>
-        {customer?.firstName ? (<p>Hola! {customer.firstName}</p>) : (<Link href="/login">Login</Link>)}
+        {/* {customer?.firstName ? (<p>Hola! {customer.firstName}</p>) : (<Link href="/login">Login</Link>)} */}
         <NoSSRShoppingCart />
       </div>
     </header>)
