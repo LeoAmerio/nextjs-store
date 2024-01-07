@@ -5,14 +5,15 @@ interface ErrorPageProps {
 }
 
 type ProductType = {
-  id: number;
+  id: string;
   title: string;
   description: string;
   price: number;
   image: string;
-  quantity: string;
+  quantity: number;
   handle: string;
   tags: string;
+  gql_id: string;
 };
 
 interface  CreateUserResponse {
@@ -24,4 +25,6 @@ type CartItem = {
   price: number;
   quantity: number;
   id: string;
+  image: string;
+  merchandiseId: string;
 }
