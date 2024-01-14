@@ -16,8 +16,11 @@ type ProductType = {
   gql_id: string;
 };
 
-interface  CreateUserResponse {
-  customerCreate: CustomerCreateInput;
+interface  customerCreate {
+  customer: {
+    firstName: string
+    email: string
+  }
 }
 
 type CartItem = {

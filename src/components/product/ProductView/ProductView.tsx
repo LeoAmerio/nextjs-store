@@ -10,10 +10,6 @@ interface ProductViewProps {
 }
 
 export const ProductView = ({ product }: ProductViewProps) => {
-  // const router = useRouter();
-
-  // if (!product)
-  //   router.push('/');
 
   return (
     <main className={styles.ProductView}>

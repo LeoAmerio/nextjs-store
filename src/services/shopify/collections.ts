@@ -20,7 +20,6 @@ export const getCollections = async () => {
   } catch (error) {
     console.log(error);
   }
-  
 }
 
 export const getCollectionProducts = async (id: string) => {
@@ -33,6 +32,6 @@ export const getCollectionProducts = async (id: string) => {
     const { products } = await response.json();
     return products;
   } catch (error) {
-    
+    console.error(error);
   }
 }

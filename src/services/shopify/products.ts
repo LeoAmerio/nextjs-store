@@ -8,12 +8,13 @@ export const getProducts = async (id?: string): Promise<ProductType[]> => {
       headers: new Headers({
         'X-Shopify-Access-Token': env.SHOPIFY_TOKEN,
       }),
-      cache: 'force-cache',
-      next: {
-        tags: ['main-products']
-      }
+      // cache: 'force-cache',
+      // next: {
+      //   tags: ['main-products']
+      // }
     })
-    const {products} = await response.json()
+    const { products } = await response.json()
+
     const transformedProducts = products.map((product: any) => {
       return {
         id: product.id,
@@ -32,14 +33,17 @@ export const getProducts = async (id?: string): Promise<ProductType[]> => {
   } catch (error) {
     console.log(error);
   }
-  
 }
 
 export const getMainProducts = async () => {
   const response = await fetch(shopifyUrls.products.mainProducts, {
     headers: new Headers({
       'X-Shopify-Access-Token': env.SHOPIFY_TOKEN
-    })
+    }),
+    cache: 'force-cache',
+    next: {
+      tags: ['main-products']
+    }
   })
 
   const {products} = await response.json()

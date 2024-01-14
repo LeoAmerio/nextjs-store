@@ -4,9 +4,12 @@ import { handleLogin } from 'app/actions';
 
 export const LoginForm = () => {
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
+  const handleSubmit = async (event: {
+    target: any;
+    preventDefault: () => void;
+  }) => {
+    const formData = new FormData(event.target);
+    event.preventDefault();
     await handleLogin(formData);
   }
 
